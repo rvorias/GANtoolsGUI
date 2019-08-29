@@ -4,6 +4,7 @@ This python program provides a crude interface for [Vee9ahd1's GANtools](https:/
 ## requirements
 
 - Linux
+	- ffmpeg (for building the movie)
 	- mpv (for showing the movie)
 - python3
 	- gantools (sampling)

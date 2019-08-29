@@ -159,7 +159,7 @@ class App(QWidget):
         subprocess.run(cmd)
         
         #Play the file        
-        cmd = ['mpv','output.mp4','--loop']
+        cmd = ['mpv','output/output.mp4','--loop']
         print(cmd)
         subprocess.run(cmd)
 

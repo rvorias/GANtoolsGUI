@@ -1,3 +1,5 @@
+# Raphael Vorias
+
 import sys, os
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit
 from PyQt5.QtWidgets import QLabel, QSpinBox
@@ -54,6 +56,7 @@ class App(QWidget):
         nFramesLabel.setText('nFrames')
         self.nFramesSB = QSpinBox()
         self.nFramesSB.setMinimum(0)
+        self.nFramesSB.setMaximum(999)
         self.nFramesSB.setValue(10)
         
         hboxNFrames.addWidget(nFramesLabel)   
@@ -74,6 +77,7 @@ class App(QWidget):
         vboxLeft.addLayout(hboxOutput)        
         
         # KEYS ################################################################
+        # Feel free to add more keys
         self.addNewKey()
         self.addNewKey()
         self.addNewKey()

@@ -43,6 +43,7 @@ class App(QWidget):
         hboxLogin.addWidget(self.usernameLE)
         hboxLogin.addWidget(passwordLabel)
         hboxLogin.addWidget(self.passwordLE)
+        self.passwordLE.setEchoMode(QLineEdit.Password)
                 
         vboxLeft.addLayout(hboxLogin)
         

@@ -13,12 +13,10 @@ This python program provides a crude interface for [Vee9ahd1's GANtools](https:/
 
 ## example
 
-![example](gitData/screenshot.png)
+![example](gitData/screenshot.png)![](gitData/example5key.gif)
 
 Fill in the text fields. In the empty bars you should paste your keys.
 
 In the .py file, you can set your default username and password under `setUserSettings()`.
 
 The bigGAN might take a while to load. GL!
-
-![](gitData/example5key.gif)

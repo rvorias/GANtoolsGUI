@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Author: Raphael Vorias
+=======
+# Raphael Vorias
+>>>>>>> b26fbc4587e5c297dfffe373b89cfb2d17094678
 
 import sys, os
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLineEdit
@@ -56,6 +60,7 @@ class App(QWidget):
         hboxLogin.addWidget(self.usernameLE)
         hboxLogin.addWidget(passwordLabel)
         hboxLogin.addWidget(self.passwordLE)
+        self.passwordLE.setEchoMode(QLineEdit.Password)
                 
         self.vboxLeft.addLayout(hboxLogin)
         
@@ -87,6 +92,7 @@ class App(QWidget):
         self.vboxLeft.addLayout(hboxOutput)        
         
         # KEYS ################################################################
+<<<<<<< HEAD
         hboxNKeys = QHBoxLayout()      
         nKeysLabel = QLabel()
         nKeysLabel.setText('nKeys')
@@ -105,6 +111,19 @@ class App(QWidget):
         self.setKeysWidgets() #puts keys in self.vboxKeys
         self.vboxLeft.addLayout(self.vboxKeys)
         self.vboxLeft.addStretch(1)
+=======
+        # Feel free to add more keys
+        self.addNewKey()
+        self.addNewKey()
+        self.addNewKey()
+        self.addNewKey()
+        self.addNewKey()
+        vboxKeys = QVBoxLayout()
+        for k in self.keys:
+            vboxKeys.addWidget(k)
+        vboxLeft.addLayout(vboxKeys)
+        vboxLeft.addStretch(1)
+>>>>>>> b26fbc4587e5c297dfffe373b89cfb2d17094678
         
         # RIGHT VBOX ##########################################################
         runButton = QPushButton('run', self)
@@ -229,7 +248,11 @@ class App(QWidget):
         subprocess.run(cmd)
         
         #Play the file        
+<<<<<<< HEAD
         cmd = ['mpv','output/'+self.randHex+'.mp4','--loop']
+=======
+        cmd = ['mpv','output/output.mp4','--loop']
+>>>>>>> b26fbc4587e5c297dfffe373b89cfb2d17094678
         print(cmd)
         subprocess.run(cmd)
         self.pushLog('__ viewing : done __')

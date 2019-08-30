@@ -131,8 +131,8 @@ class App(QWidget):
         
     def setUserSettings(self):
         #Fill here for auto-fill
-        self.usernameLE.setText('xxxx@gmail.com')
-        self.passwordLE.setText('xxxx')
+        self.usernameLE.setText('') #<--- username
+        self.passwordLE.setText('') #<--- passw
         self.keys[0].setText('b7be350699c9eef42f5e4c6a')
         self.keys[1].setText('b5c06f29c1b15039812bf45a')
         self.keys[2].setText('54fc255ae27d61ad87f34687')
@@ -175,6 +175,7 @@ class App(QWidget):
         self.pushLog('__ running : might take a while to load bigGAN __')
         self.logLabel.update()
         self.randHex = '%06x' % random.randint(0, 0xFFFFFF)
+        outputDir = self.outputLE.text()+self.randHex
         print('calling command inside conda environment')
         print('bash command:')
         cmd = ['gantools']
@@ -185,9 +186,7 @@ class App(QWidget):
         cmd.append('--nframes')
         cmd.append(str(self.nFramesSB.value()))
         cmd.append('--output-dir')
-        cmd.append(self.outputLE.text())
-        cmd.append('--prefix')
-        cmd.append(self.randHex+'-')
+        cmd.append(outputDir)
         cmd.append('--keys')
         for k in self.keys:
             if k.text() != '':
@@ -195,11 +194,11 @@ class App(QWidget):
 
         # create output folder if it doesn't exist
         try:
-            os.mkdir(self.outputLE.text())
+            os.mkdir(outputDir)
         except OSError:
-            print ("%s Already exists" % self.outputLE.text())
+            print ("%s Already exists" % outputDir)
         else:
-            print ("Successfully created the directory %s " % self.outputLE.text())
+            print ("Successfully created the directory %s " % outputDir)
         
         # run ganTools
         print(cmd)
@@ -221,7 +220,7 @@ class App(QWidget):
         cmd.append('-f')
         cmd.append('image2')
         cmd.append('-i')
-        cmd.append('output/'+self.randHex+'-%04d.jpeg')
+        cmd.append('output/'+self.randHex+'/%04d.jpeg')
         cmd.append('-crf')
         cmd.append('18')
         cmd.append('output/'+self.randHex+'.mp4')

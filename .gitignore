@@ -2,4 +2,6 @@
 *.jpeg
 *.mp4
 *.html
+*.gif
+*.sh
 .spyproject/

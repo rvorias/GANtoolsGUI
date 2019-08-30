@@ -7,6 +7,7 @@ This python program provides a crude interface for [Vee9ahd1's GANtools](https:/
 	- ffmpeg (for building the movie)
 	- mpv (for showing the movie)
 - python3
+	- tensorflow (bigGAN)
 	- gantools (sampling)
 	- pyqt (GUI)
 
@@ -15,5 +16,7 @@ This python program provides a crude interface for [Vee9ahd1's GANtools](https:/
 Fill in the text fields. In the empty bars you should paste your keys.
 
 In the .py file, you can set your default username and password under `setUserSettings()`.
+
+The bigGAN might take a while to load. GL!
 
 ![example](gitData/screenshot.png)

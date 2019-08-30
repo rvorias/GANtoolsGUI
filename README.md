@@ -1,3 +1,4 @@
+![](gitData/example5key.gif)
 # gantoolsGUI
 This python program provides a crude interface for [Vee9ahd1's GANtools](https://gitlab.com/Vee9ahd1/gantools) and [Ganbreeder](https://ganbreeder.app/)
 
@@ -13,7 +14,7 @@ This python program provides a crude interface for [Vee9ahd1's GANtools](https:/
 
 ## example
 
-![example](gitData/screenshot.png)![](gitData/example5key.gif)
+![example](gitData/screenshot.png)
 
 Fill in the text fields. In the empty bars you should paste your keys.
 

@@ -1,4 +1,4 @@
-![](gitData/example5key.gif)
+![](gitData/example5key.gif)![](gitData/example5key2.gif)
 # gantoolsGUI
 This python program provides a crude interface for [Vee9ahd1's GANtools](https://gitlab.com/Vee9ahd1/gantools) and [Ganbreeder](https://ganbreeder.app/)
 
